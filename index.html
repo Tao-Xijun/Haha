@@ -4,16 +4,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>战地记录</title>
+    <style>
+        body.background {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 2.5em;
+            margin-top: 20px;
+        }
+
+        hr {
+            border: 1px solid white;
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        p {
+            text-align: center;
+            color: white;
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            color: #00f;
+            font-size: 1.2em;
+            margin: 20px auto;
+            text-decoration: none;
+        }
+
+        video {
+            display: block;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 800px;
+            border: 2px solid white;
+            border-radius: 10px;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            var particlesDiv = document.createElement('div');
+            particlesDiv.id = 'particles-js';
+            document.body.prepend(particlesDiv);
+            particlesJS('particles-js', {
+                "particles": {
+                    "number": {
+                        "value": 80,
+                        "density": {
+                            "enable": true,
+                            "value_area": 800
+                        }
+                    },
+                    "color": {
+                        "value": "#ffffff"
+                    },
+                    "shape": {
+                        "type": "circle"
+                    },
+                    "opacity": {
+                        "value": 0.5,
+                        "random": false
+                    },
+                    "size": {
+                        "value": 3,
+                        "random": true
+                    },
+                    "line_linked": {
+                        "enable": true,
+                        "distance": 150,
+                        "color": "#ffffff",
+                        "opacity": 0.4,
+                        "width": 1
+                    },
+                    "move": {
+                        "enable": true,
+                        "speed": 2,
+                        "direction": "none",
+                        "random": false,
+                        "straight": false,
+                        "out_mode": "out"
+                    }
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": {
+                        "onhover": {
+                            "enable": true,
+                            "mode": "repulse"
+                        },
+                        "onclick": {
+                            "enable": true,
+                            "mode": "push"
+                        }
+                    },
+                    "modes": {
+                        "repulse": {
+                            "distance": 100
+                        },
+                        "push": {
+                            "particles_nb": 4
+                        }
+                    }
+                },
+                "retina_detect": true
+            });
+        });
+    </script>
+
 </head>
 
-<body>
+<body class="background" style="background-color: black;">
     <h1>你还是来了</h1>
     <hr>
     <p>战地记者冒死记录，薛某与张某的深夜谈话</p>
     <p>建议下载后食用，下载后为压缩文件（iphone不支持下载），建议用流量看</p>
     <p>一般情况下比较卡，很难播放（没钱租境内的服务器QAQ）</p>
-    <a href="./记录.zip">下载</a>
+    <a href=" ./记录.zip">下载</a>
     <br>
     <video src="./video0012.mp4" controls></video>
     <video src="./video0013.mp4" controls></video>
